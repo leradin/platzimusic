@@ -1,9 +1,9 @@
 <template lang="pug">
   #app
-    img(src='./assets/logo.png')
+    img(src='https://leradin.github.io/platzimusic/src/assets/logo.png')
     h1 PlatziMusic
     select(v-model="selectedCountry")
-      option(v-for="country in countries" :value="country.value") {{ country.name }}
+      option(v-for="country in countries" v-bind:value="country.value") {{ country.name }}
       spinner(v-show="loading")
     ul
       artist(v-for="artist in artists" v-bind:artist="artist" v-bind:key="artist.mbid") 
